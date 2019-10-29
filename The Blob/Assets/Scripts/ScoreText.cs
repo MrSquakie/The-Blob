@@ -7,8 +7,10 @@ public class ScoreText : MonoBehaviour
 {
     public Text scoreText;
 
-    private int score;
+    public int score;
     private int goodCount;
+
+    public AudioSource collectSound => GetComponent<AudioSource>();
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class ScoreText : MonoBehaviour
         {
             score++;
             scoreText.text = "Score: " + score + "/" + goodCount;
+            collectSound.Play();
             Destroy(other.gameObject);
         }
     }
