@@ -25,7 +25,6 @@ public class YouWin : MonoBehaviour
         }
     }
 
-
     public float timer = 1f;
 
     void Timer()
@@ -41,7 +40,4 @@ public class YouWin : MonoBehaviour
         }
         print(timer);
     }
-
-
-
 }
