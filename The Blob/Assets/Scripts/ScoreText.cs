@@ -5,11 +5,25 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public Rigidbody player;
+    public Text scoreText;
 
-    // Update is called once per frame
-    void Update()
+    private int score;
+    private int goodCount;
+
+    private void Start()
     {
-        GetComponent<Text>().text = "Score: " + player.mass;
+        score = 0;
+        goodCount = GameObject.FindGameObjectsWithTag("Good").Length;
+        scoreText.text = "Score: " + score + "/" + goodCount;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Good"))
+        {
+            score++;
+            scoreText.text = "Score: " + score + "/" + goodCount;
+            Destroy(other.gameObject);
+        }
     }
 }
