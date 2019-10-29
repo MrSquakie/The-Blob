@@ -56,6 +56,5 @@ public class BlobSpawner : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
-        print(timer);
     }
 }
