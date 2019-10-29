@@ -10,10 +10,12 @@ public class Timer : MonoBehaviour
 
     public Text timerText;
 
-    // Start is called before the first frame update
     void Start()
     {
         timerText.text = "";
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
