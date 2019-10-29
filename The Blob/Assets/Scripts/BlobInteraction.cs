@@ -38,12 +38,7 @@ public class BlobInteraction : MonoBehaviour
                 Component collider;
                 if (ObiCollider.idToCollider.TryGetValue(contact.other, out collider))
                 {
-                    if (collider.transform.name == "Player")
-                    {
-                        Health health = collider.GetComponent<Health>();
-                        health.TakeDamge(5f);
-                        Destroy(gameObject);
-                    }
+                    
                 }
             }
         }
