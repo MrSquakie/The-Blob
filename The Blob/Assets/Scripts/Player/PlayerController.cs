@@ -12,14 +12,15 @@ public class PlayerController : MonoBehaviour
     public string horizontalAxis = "Horizontal", verticalAxis = "Vertical";
     public float speed = 2.0f;
     public Transform tiltTransform;
-    public Rigidbody rb => GetComponentInChildren<Rigidbody>();
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(transform.forward * 1000f);
+            //rb.velocity.Set(5f,5f,5f);
+            print("hit");
+            transform.position += Vector3.forward * 2f * Time.deltaTime;
         }
        
     }
