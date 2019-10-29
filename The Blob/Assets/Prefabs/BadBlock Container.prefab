@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4889838582656870585}
   - component: {fileID: 4889838582656870584}
   - component: {fileID: 4889838582656870587}
+  - component: {fileID: 477755292425992886}
   m_Layer: 0
   m_Name: BadBlock
   m_TagString: Bad
@@ -109,6 +110,24 @@ MonoBehaviour:
   - {fileID: 4889838584211539358}
   - {fileID: 4889838584265960350}
   speed: 4
+--- !u!114 &477755292425992886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889838582656870582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  phase: 0
+  thickness: 0
+  sourceCollider: {fileID: 4889838582656870584}
+  useDistanceFields: 0
+  distanceField: {fileID: 0}
 --- !u!1 &4889838584211539358
 GameObject:
   m_ObjectHideFlags: 0

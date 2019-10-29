@@ -7,15 +7,14 @@ public class BlobSpawner : MonoBehaviour
 
     public Vector3 center;
     public Vector3 size;
+    public float timer = 1f; 
 
-    public GameObject BlobPrefab; 
+    public GameObject BlobPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +22,9 @@ public class BlobSpawner : MonoBehaviour
         {
             SpawnItem();
         }
+
+
+        Timer();
     }
 
     public void SpawnItem()
@@ -39,5 +41,21 @@ public class BlobSpawner : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawCube(center, size);
+    }
+
+
+
+    void Timer()
+    {
+        if (timer <= 0 )
+        {
+            SpawnItem();
+            timer = 1f;
+        }
+        else
+        {
+            timer -= Time.deltaTime;
+        }
+        print(timer);
     }
 }
