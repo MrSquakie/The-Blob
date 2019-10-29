@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 5168367323082497386}
   - component: {fileID: 5168367323082497385}
   - component: {fileID: 5168367323082497384}
+  - component: {fileID: -8457712866463145019}
   m_Layer: 0
-  m_Name: Obi Softbody
+  m_Name: Blob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6667,3 +6668,15 @@ MonoBehaviour:
     iterations: 3
     SORFactor: 1
     enabled: 0
+--- !u!114 &-8457712866463145019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5168367323082497391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd573db7c1570434f8574ab9ffff65d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -19,7 +19,7 @@ public class BlobSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.M))
         {
             SpawnItem();
         }
