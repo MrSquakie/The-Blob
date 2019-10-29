@@ -28,6 +28,8 @@ public class BlobInteraction : MonoBehaviour
         solver.OnCollision -= Solver_OnCollision;
     }
 
+    public bool OnGround = false;
+    public AudioSource groundhit => GetComponent<AudioSource>();
     void Solver_OnCollision(object sender, Obi.ObiSolver.ObiCollisionEventArgs e)
     {
         foreach (Oni.Contact contact in e.contacts)
@@ -38,7 +40,15 @@ public class BlobInteraction : MonoBehaviour
                 Component collider;
                 if (ObiCollider.idToCollider.TryGetValue(contact.other, out collider))
                 {
-                    
+                    if (collider.transform.tag == "Floor")
+                    {
+                        if (!OnGround)
+                        {
+                            groundhit.Play();
+                            print("HIT");
+                            OnGround = true;
+                        }
+                    }
                 }
             }
         }
