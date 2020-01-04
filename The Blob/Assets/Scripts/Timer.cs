@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float targetTime = 180f;
+    private float targetTime = 120f;
+    private int time;
 
     public Text timerText;
 
@@ -22,8 +23,9 @@ public class Timer : MonoBehaviour
     void Update()
     {
         targetTime -= Time.deltaTime;
+        time = (int)targetTime;
 
-        timerText.text = targetTime.ToString();
+        timerText.text = time.ToString();
 
         if(targetTime <= 0)
         {
